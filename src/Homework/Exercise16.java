@@ -10,14 +10,17 @@ public class Exercise16 {
     // Function to print integer to binary using
     int b1, b2; //hold binary numbers 0 and 1
     int i = 0, c = 0;
-    int[] sum = new int[10]; //create array to show int into binary number
+    int[] sum = new int[8]; //create array to show int into binary number
+    int output=0, power=1;
 
     public static void main(String[] args) {
 
         Exercise16 e16 = new Exercise16(); //Create object
-        e16.decimalToBinary(); //call
-        e16.a1();
-        //e16.binaryToDecimal();
+        //call methods
+        e16.decimalToBinary();
+        e16.binaryAddition();
+        //e16.binaryToDecimal1();
+        e16.binaryToDecimal2();
         System.out.println("Exiting the program");
         System.exit(0);
     }
@@ -29,7 +32,7 @@ public class Exercise16 {
         Scanner input = new Scanner(System.in); // get user data
 
 
-        System.out.println("Enter first number : ");
+        System.out.println("Enter first number: ");
         binary1 = input.nextInt(); //store the number
         System.out.println("Binary Value = " + Integer.toBinaryString(binary1));
 
@@ -39,21 +42,37 @@ public class Exercise16 {
     }
 
 
+
+
     /*
     public void binaryToDecimal(){
 
+
         System.out.println("Binary number back to Int = " );
         int multiplier = 1;
-        for (i = 7; i >= 0; --i )
-        {
-            sum += (multiplier * sum[i]);
-            multiplier *= 10;
+        int a = 0;
+        for (i = 0; i <= sum.length-1; --i ) {
+            a = a * 10 + sum[i];
         }
     }
-*/
+    */
+
+    public void binaryToDecimal2(){
+
+        for (i=0; i<4; i++)
+        {
+
+            output += sum[8-i]*power;
+            power *= 2;
+        }
+
+        System.out.println(output);
+    }
 
 
-    public void a1() {
+
+
+    public void binaryAddition() {
         Scanner input = new Scanner(System.in); // get user data
 
 
