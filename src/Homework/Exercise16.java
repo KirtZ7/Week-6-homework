@@ -32,11 +32,11 @@ public class Exercise16 {
         Scanner input = new Scanner(System.in); // get user data
 
 
-        System.out.println("Enter first number: ");
+        System.out.println("Enter first number (0- 127): ");
         binary1 = input.nextInt(); //store the number
         System.out.println("Binary Value = " + Integer.toBinaryString(binary1));
 
-        System.out.println("Enter second number: ");
+        System.out.println("Enter second number (0- 127): ");
         binary2 = input.nextInt(); //store the number
         System.out.println("Binary Value = " + Integer.toBinaryString(binary2));
     }
@@ -44,7 +44,7 @@ public class Exercise16 {
 
 
 
-    /*
+/*
     public void binaryToDecimal(){
 
 
@@ -57,13 +57,17 @@ public class Exercise16 {
     }
     */
 
+
+
     public void binaryToDecimal2(){
 
-        for (i=0; i<4; i++)
+        for (i=0; i <7; i++)
         {
 
-            output += sum[8-i]*power;
+            output += sum[7-i]*power;
+            System.out.println("Output = "+ output);
             power *= 2;
+
         }
 
         System.out.println(output);
